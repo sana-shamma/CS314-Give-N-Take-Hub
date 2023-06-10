@@ -1,0 +1,10 @@
+ .form-control:focus {
+    border-color: #ced4da; /* set the focus border color */
+    box-shadow: none; /* remove the focus box shadow */
+  }
+  .form-control{
+    color: #999999;
+  }
+  .custom-label {
+    color: #999999;
+  }

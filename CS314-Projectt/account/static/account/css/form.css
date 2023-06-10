@@ -1,0 +1,64 @@
+ .form-labels{
+    color: rgb(110, 106, 106);
+ }
+ .link-color{
+    color: rgb(133, 127, 127);
+  }
+  .link-color:hover{
+    color: rgb(82, 80, 80);
+  }
+  .error-massage{
+    color: rgb(200, 17, 17);
+  }
+  .h2-color-p{
+    margin-bottom: 10px;
+    color: #ffc107;
+    text-align: center;
+  }
+  .input-bg-color-p {
+    margin-top: 0px;
+    background-color: rgb(224, 228, 228) !important;
+  }
+  .bt-color{
+    background-color: #ffc107 !important;
+    color: aliceblue !important;
+  }
+  .background-radial-gradient {
+    background-color: hsl(218, 41%, 15%);
+    background-image: radial-gradient(650px circle at 0% 0%,
+        hsl(216, 2%, 50%) 15%,
+        hsl(225, 2%, 43%) 35%,
+        hsl(210, 1%, 29%) 75%,
+        hsl(210, 2%, 23%) 80%,
+        transparent 100%),
+      radial-gradient(1250px circle at 100% 100%,
+        hsl(217, 4%, 62%) 15%,
+        hsl(220, 1%, 41%) 35%,
+        hsl(210, 1%, 31%) 75%,
+        hsl(240, 1%, 23%) 80%,
+        transparent 100%);
+  }
+
+  #radius-shape-1 {
+    height: 220px;
+    width: 220px;
+    top: -60px;
+    left: -130px;
+    background: radial-gradient(#e7ce85, #ffc107);
+    overflow: hidden;
+  }
+
+  #radius-shape-2 {
+    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+    bottom: -60px;
+    right: -110px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(#e7ce85, #ffc107);
+    overflow: hidden;
+  }
+
+  .bg-glass {
+    background-color: hsla(0, 0%, 100%, 0.9) !important;
+    backdrop-filter: saturate(200%) blur(25px);
+  }

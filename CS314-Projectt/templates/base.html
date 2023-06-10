@@ -1,0 +1,38 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>MultiShop - Online Shop Website</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Online Marketplace" name="keywords">
+        <meta content="This Website provides a set of three primary services, namely, borrowing, bartering, and gifting.
+            Whether you're looking to one of these services, our platform makes it easy and accessible to you!."
+            name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Content here -->
+        {% include 'part/header.html'%}
+        {% block content %}
+        {% endblock %}
+        {% include 'part/footer.html'%}
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+
+</html>

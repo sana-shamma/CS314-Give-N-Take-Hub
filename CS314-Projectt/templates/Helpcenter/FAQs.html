@@ -1,0 +1,190 @@
+{% extends 'base.html' %} {% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FAQs</title>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <style>
+      body {
+        background-color: #eee;
+        padding-top: 20px;
+        font-family: inherit;
+        color: black;
+      }
+      .header {
+        border-radius: 20px 20px 0px 0px;
+        padding: 10px 0px;
+        background: #ffd333 !important;
+        color: #000000;
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+      }
+      .faq-item {
+        margin-bottom: 40px;
+        margin-top: 40px;
+        color: black;
+        font-weight: bold;
+      }
+      .faq-body {
+        display: none;
+        margin-top: 30px;
+      }
+      .faq-wrapper {
+        width: 75%;
+        margin: auto;
+      }
+      .faq-inner {
+        padding: 30px;
+        background: rgb(241, 245, 248);
+      }
+      .faq-plus {
+        float: right;
+        font-size: 1.9em;
+        line-height: 1em;
+        cursor: pointer;
+        color: #e4ac05dc;
+        font-weight: bold;
+      }
+      hr {
+        background-color: #b6c3df;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="faq-wrapper">
+          <div class="header">
+            <h1>Frequently Asked Questions</h1>
+          </div>
+          <div class="faq-inner">
+            <div class="faq-item">
+              <h3>
+                what is a Give-N-Take Hub site??
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                This website serves as a platform where individuals can exchange
+                goods and personal belongings for other items they require. The
+                unique aspect is that the exchange occurs without involving
+                money; instead, it follows a direct barter system, where goods
+                are swapped for goods. Additionally, through our website, you
+                have the option to choose an item as a gift or borrow it.
+              </div>
+            </div>
+            <hr />
+            <div class="faq-item">
+              <h3>
+                What's new in a Give-N-Take Hub website if we can exchange
+                goodson social networking sites like Facebook?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                The novelty lies in the website's mechanism, where the website
+                itself searches for the desired goods on your behalf, and
+                connects them to the items you wish to exchange. Here's an
+                example to illustrate how the website operates: Let's assume you
+                own a Samsung phone and would like to try an iPhone. When you
+                register your request on our platform, our system will search
+                through all the registered items from our visitors who own an
+                iPhone and wish to exchange it for a Samsung phone. Then, your
+                item will be linked to all the available iPhones on our
+                platform, and you will receive notifications accordingly. In
+                case no iPhone is currently available at the time of your
+                request, our system will link your request to the first iPhone
+                that gets added and send you a notification. Additionally, you
+                have the option to take the desired item as a gift or even
+                borrow it.
+              </div>
+            </div>
+            <hr />
+            <div class="faq-item">
+              <h3>
+                Key features of the Give-N-Take Hub website include:
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                1. Save valuable time by quickly navigating through comments in
+                communication groups until you locate the specific information
+                you seek.<br />
+
+                2. You have the flexibility to select more than one desired item
+                for exchange. For instance, you can register a request to trade
+                your Samsung device for a Huawei, iPhone, or even a laptop.<br />
+
+                3. Unlike in communication groups where posts become more
+                difficult accessible over time, the Give-N-Take Hub site
+                operates differently. It employs a mechanism that continuously
+                sorts and connects items, allowing you to add your request today
+                and still find what you're looking for on the same day,
+                tomorrow, or even after a month. This eliminates any time
+                constraints; you only need to follow alerts, which typically
+                take less than a minute.<br />
+
+                4. Gift or Borrowing Options: You can discover and obtain the
+                desired goods as a gift or, as a borrowed item.
+              </div>
+            </div>
+            <hr />
+            <div class="faq-item">
+              <h3>
+                What commodities are allowed to be exchanged?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                The website lets you trade in any sort of commodities, and a lot
+                of people have already registered their items on it. Users may
+                simply get in touch with us and submit the name of the item if
+                they are unable to locate it throughout the search.We'll make
+                sure it's exchangeable and instantly add it to our database.
+              </div>
+            </div>
+            <hr />
+            <div class="faq-item">
+              <h3>
+                Is a login required to use the Give-N-Take Hub website?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                Logging in is necessary to link the additional items to your
+                personal account and enable owner communication. This makes it
+                possible for parties participating in the exchange process to
+                ask specific questions and exchange information. It guarantees a
+                smooth exchange experience and enables consumers to get the
+                information they need before to completing the transaction.
+              </div>
+            </div>
+            <hr />
+            <div class="faq-item">
+              <h3>
+                How will the goods be delivered to the two parties to the
+                barter?
+                <span class="faq-plus">&plus;</span>
+              </h3>
+              <div class="faq-body">
+                Through the site's chat feature, the two parties engaged in the
+                barter can utilize it to coordinate and arrange the meeting time
+                and location for exchanging the goods. This chat functionality
+                enables effective communication and ensures that both parties
+                can conveniently manage the logistics of the exchange.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(".faq-plus").on("click", function () {
+        $(this).parent().parent().find(".faq-body").slideToggle();
+      });
+    </script>
+  </body>
+</html>
+{% endblock %}

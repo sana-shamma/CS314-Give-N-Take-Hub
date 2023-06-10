@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+    .card {
+      background-color: white;
+      color: black;
+    }
+  }
+
+.card-header {
+    background-color: #F8D700;
+    color: black;
+}
+
+
+
+.card-text {
+    color: white;
+}
+
+.btn-primary {
+    background-color: #F8D700;
+    border-color: #F8D700;
+}
+
+.btn-primary:hover {
+    background-color: black;
+    border-color: #F8D700;
+}

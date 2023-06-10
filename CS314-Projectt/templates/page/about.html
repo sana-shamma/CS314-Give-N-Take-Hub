@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MultiShop - Online Shop Website</title>
+</head>
+<body>
+    <!-- Biography Start -->
+    <div class="container-fluid pt-5">
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">ABOUT
+                US</span></h2>
+        <div class="row px-xl-5 pb-3">
+            <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
+                <div class="text-body">
+                    <p>As junior Software Engineering students who determined to make dramatic change in the world, we
+                        have developed
+                        unique idea for our web development course at UPM and for the marketing industry as a general,
+                        which is website serves
+                        as an online marketplace that facilitates and provides a set of three primary services, namely,
+                        borrowing, bartering, and
+                        gifting. Whether you're looking to one of these services, our platform makes it easy and
+                        accessible to you!.</p>
+                    <h5 class="font-weight-semi-bold m-0">Our Idea:</h5>
+                    <p>According to the well-known story of a man who gets a house as a result of exchanging much stuff,
+                        starting from a red paper
+                        clip, then a door handle and a food grill, until he exchanged a role in a movie for a house.
+                        From this story, our website was
+                        born to open the business door for everyone. Our users can exchange something they no longer
+                        want but that has value to others,
+                        provide a service in exchange for the product they want. With our website, there is no place for
+                        excuses to start your business
+                        and fulfill your dreams!</p>
+                    <h5 class="font-weight-semi-bold m-0">Our Goal:</h5>
+                    <p>Our main goal with this website is to encourage people to initiative and inculcate this in them,
+                        but at the same time, the website
+                        helps spread the principles of reuse. Instead of people throwing their property, they can
+                        display the things that are in a good condition
+                        on the website and people come to barter or borrow them, and this idea helps to create a spirit
+                        of cooperation and initiative, but at the
+                        same time helps to preserve the environment, this is in line with the Kingdom of Saudi Arabia's
+                        Vision 2030.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Biography End -->
+    <!-- Featured Start -->
+    <div class="container-fluid pt-5">
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">OUR
+                QUALITY ATTRIBUTES</span></h2>
+        <div class="row px-xl-5 pb-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
+                    <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-shipping-fast text-primary m-0 mr-2"></h1>
+                    <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-phone-volume text-primary m-0 mr-3"></h1>
+                    <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Featured End -->
+
+    <!-- Vendor Start -->
+    <div class="container-fluid py-5">
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">OUR
+                SUCCESS PARTNERS</span></h2>
+        <div class="row px-xl-5">
+            {% for x in post.all %}
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light mb-4" style ="display: flex; justify-content: center; align-items: center;" style="padding: 30px;">
+                    <div class="bg-light p-4">
+                        <img src="{{x.logo.url}}" alt="">
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Vendor End -->
+    
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+</body>
+
+</html>
+{% endblock %}

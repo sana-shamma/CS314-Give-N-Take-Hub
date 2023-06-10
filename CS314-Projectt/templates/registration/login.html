@@ -1,0 +1,87 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Login</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="{% static 'account/MDB/css/mdb.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'account/css/form.css' %}" />
+    </head>
+    <body>
+      <!-- Start your project here-->
+      <!-- Section: Design Block -->
+  <section class="background-radial-gradient overflow-hidden" >
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+      <div class="row gx-lg-5 align-items-center mb-5">
+        <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+          <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%) ">
+            Have an account? <br />
+          </h1>
+          <p class="mb-7 ls-tight" style="color: hsl(218, 81%, 95%); letter-spacing: 2px; word-spacing: 2px; font-size: 18px; ">
+            Welcome back to our community! Browse our diverse range of products and discover unique 
+            and creative items, all at your fingertips.
+          </p>
+        </div>
+
+        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+          <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+          <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+
+          <div class="card bg-glass">
+            <div class="card-body px-4 py-5 px-md-5">
+              <form onsubmit="return validateForm()" class="forms_form" ID="login-form"method="POST" action="{% url 'login' %}">
+                {% csrf_token %}
+                <h2 class="h2-color-p">Login</h2>
+                <br>
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <br>
+                  <label class="form-labels" for="email">Email address</label>
+                  <input type="email" id="email" name="email" class="form-control input-bg-color-p" required/>
+                  <p class="error-massage" id="email-error">{{email_error_message}}</p>
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <br>
+                  <label class="form-labels" for="password">Password</label>
+                  <input type="password" name= "password" id="password" class="form-control input-bg-color-p" required/>
+                  <p class="error-massage" id="password-error"></p>
+                  <br>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-block mb-4 bt-color">
+                  Login
+                </button>
+                <p  class="error-massage" id="requiredfields-error">{{error_message}}</p>
+                <a class="link-color link-color:hover" href="{% url 'signup' %}">Don't have an Account</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+      <!-- Section: Design Block -->
+      <!-- End your project here-->
+
+   
+    <!-- Custom scripts -->
+    <script type="text/javascript"  src="{% static 'account/js/login.js' %}"></script>
+  </body>
+</html>
+
